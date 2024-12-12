@@ -11,13 +11,13 @@
   "scripts": {
     "build": "tsc",
     "start": "ts-node ./src/index.ts",
-    "gcp-build": "npm run build",
-    "gcp-start": "npm run start",
-    "dev": "nodemon src/index.ts"
+    "dev": "nodemon src/index.ts",
+    "ci": "pm2 start src/index.ts --interpreter ts-node --exp-backoff-restart-delay=100 --name terrarium"
   },
   "devDependencies": {
     "node-fetch": "^3.3.2",
     "nodemon": "^3.1.0",
-    "ts-node": "^10.9.2"
+    "ts-node": "^10.9.2",
+    "pm2": "^5.4.3"
   }
 }
