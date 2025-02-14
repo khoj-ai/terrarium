@@ -63,6 +63,9 @@ terrariumApp.get('/health', (req, res) => {
     res.send("hi!");
 });
 
+terrariumApp.get('/stop', (req, res) => {
+    process.exit(1);  // Force stop the server
+});
 
 const server = terrariumApp.listen(8080, () => {
     console.log("Server is running on port 8080");

@@ -12,7 +12,7 @@
     "build": "tsc",
     "start": "ts-node ./src/index.ts",
     "dev": "nodemon src/index.ts",
-    "ci": "pm2 start src/index.ts --interpreter ts-node --exp-backoff-restart-delay=100 --name terrarium"
+    "ci": "pm2 start src/index.ts --interpreter ts-node --exp-backoff-restart-delay=100 --name terrarium -i max"
   },
   "devDependencies": {
     "node-fetch": "^3.3.2",

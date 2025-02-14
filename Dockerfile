@@ -9,5 +9,5 @@ COPY . .
 EXPOSE 8080
 ENV ENV_RUN_AS "docker"
 HEALTHCHECK --interval=1s --timeout=10s --retries=2 \
-  CMD curl -m 10 -f http://localhost:8080/health  || kill 1 
+  CMD curl -m 10 -f http://localhost:8080/health || kill 1
 ENTRYPOINT [ "ts-node" , "src/index.ts"] 
